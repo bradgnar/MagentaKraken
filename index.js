@@ -2,6 +2,7 @@
 
 
 var kraken = require('kraken-js'),
+    mongotest = require('./lib/mongotest'),
     app = {};
 
 
@@ -18,6 +19,7 @@ app.requestStart = function requestStart(server) {
 
 app.requestBeforeRoute = function requestBeforeRoute(server) {
     // Run before any routes have been added.
+    server.use(mongotest())
 };
 
 
