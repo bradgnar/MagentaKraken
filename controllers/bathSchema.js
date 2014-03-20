@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-module.exports = function(){
+exports.schema = function(){
 	return new mongoose.Schema({
 		Column: String,
 		D8te: String,
